@@ -48,7 +48,7 @@
   become: true
   template:
     src: 'etc/logrotate.d/application.j2'
-    dest: '/etc/{{ logrotate_include_dir }}/{{ item.name }}'
+    dest: '{{ logrotate_include_dir }}/{{ item.name }}'
     owner: root
     group: root
     mode: 0644
